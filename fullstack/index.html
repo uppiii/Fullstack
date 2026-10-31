@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <meta
+      name="description"
+      content="Get a clearer starting point for your next AI, software, cloud, or digital growth project with Cynbit's project-fit planner."
+    >
+    <title>Project fit planner | Cynbit Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="https://www.cynbit.in/" aria-label="Cynbit Technologies home">
+        <span class="wordmark-mark" aria-hidden="true">c.</span>
+        <span>cynbit<span class="wordmark-period">.</span></span>
+      </a>
+      <a class="header-link" href="https://www.cynbit.in/services">
+        Explore services <span aria-hidden="true">&nearr;</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="planner-layout" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A better first conversation</p>
+          <h1 id="page-title">Good work starts with a <span>clearer brief.</span></h1>
+          <p class="intro-copy">
+            A quick project-fit check to help you name the opportunity, find the right
+            starting point, and make your first conversation count.
+          </p>
+
+          <div class="intro-note">
+            <span class="note-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.5 19 6v5.1c0 4.2-2.9 7.7-7 9.4-4.1-1.7-7-5.2-7-9.4V6l7-2.5Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </span>
+            <span><strong>Built for clarity, not a sales pitch.</strong><br>About 2 minutes. No account needed.</span>
+          </div>
+
+          <div class="service-strip" aria-label="Cynbit areas of expertise">
+            <span>AI &amp; automation</span>
+            <span>Software</span>
+            <span>Cloud</span>
+            <span>Digital growth</span>
+          </div>
+        </div>
+
+        <section class="planner-card" aria-label="Project-fit planner">
+          <div class="card-topline">
+            <div class="step-copy">
+              <span class="step-kicker" id="step-kicker">PROJECT FIT CHECK</span>
+              <span class="step-count" id="step-count">01 <span>/ 02</span></span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+          </div>
+
+          <div class="step-panel" id="step-one">
+            <h2>What would you like to move forward?</h2>
+            <p class="step-description">Choose the challenge that feels closest. You can refine it later.</p>
+
+            <div class="choice-list" role="radiogroup" aria-label="Primary project focus">
+              <button class="choice-card" type="button" role="radio" aria-checked="false" tabindex="0" data-focus="automation">
+                <span class="choice-icon icon-spark" aria-hidden="true">✳</span>
+                <span class="choice-text"><strong>AI &amp; automation</strong><small>Make repetitive work run smarter</small></span>
+                <span class="choice-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button class="choice-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-focus="software">
+                <span class="choice-icon icon-code" aria-hidden="true">&lt;/&gt;</span>
+                <span class="choice-text"><strong>Custom software</strong><small>Build a product, platform, or integration</small></span>
+                <span class="choice-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button class="choice-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-focus="cloud">
+                <span class="choice-icon icon-cloud" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7.2 18.5h10.3a4.1 4.1 0 0 0 .4-8.2A6.2 6.2 0 0 0 6 9.1a4.7 4.7 0 0 0 1.2 9.4Z" /></svg>
+                </span>
+                <span class="choice-text"><strong>Cloud &amp; infrastructure</strong><small>Make your systems more resilient and ready to scale</small></span>
+                <span class="choice-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button class="choice-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-focus="growth">
+                <span class="choice-icon icon-growth" aria-hidden="true">↗</span>
+                <span class="choice-text"><strong>Digital growth</strong><small>Improve discoverability and digital performance</small></span>
+                <span class="choice-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+
+            <p class="field-error" id="focus-error" role="alert" hidden>Please choose a project focus to continue.</p>
+            <div class="card-actions">
+              <span class="privacy-note"><span aria-hidden="true">◈</span> Your answers stay in this browser</span>
+              <button class="button button-primary" id="continue-button" type="button">
+                Next step <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="step-panel" id="step-two" hidden>
+            <h2>Put the opportunity in context.</h2>
+            <p class="step-description">A few practical details help us shape a useful recommendation.</p>
+
+            <label class="range-field" for="team-size">
+              <span class="range-heading"><span>People involved in this workflow</span><output id="team-size-output" for="team-size">5 people</output></span>
+              <input id="team-size" name="team-size" type="range" min="1" max="25" value="5">
+              <span class="range-ends" aria-hidden="true"><span>1 person</span><span>25 people</span></span>
+            </label>
+
+            <label class="range-field" for="weekly-hours">
+              <span class="range-heading"><span>Hours spent per person, each week</span><output id="weekly-hours-output" for="weekly-hours">5 hours</output></span>
+              <input id="weekly-hours" name="weekly-hours" type="range" min="1" max="20" value="5">
+              <span class="range-ends" aria-hidden="true"><span>1 hour</span><span>20 hours</span></span>
+            </label>
+
+            <label class="select-field" for="timeline">
+              <span>When are you hoping to get started?</span>
+              <select id="timeline" name="timeline">
+                <option value="Soon — within a month">Soon — within a month</option>
+                <option value="In 1–3 months" selected>In 1–3 months</option>
+                <option value="In 3–6 months">In 3–6 months</option>
+                <option value="Just exploring">Just exploring</option>
+              </select>
+            </label>
+
+            <p class="field-error" id="details-error" role="alert" hidden>Choose a start timeframe to continue.</p>
+            <div class="card-actions card-actions-back">
+              <button class="button button-back" id="back-button" type="button"><span aria-hidden="true">&larr;</span> Back</button>
+              <button class="button button-primary" id="results-button" type="button">See my project fit <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </div>
+
+          <div class="step-panel result-panel" id="step-result" hidden aria-live="polite">
+            <div class="result-label"><span class="result-check" aria-hidden="true">✓</span> YOUR STARTING POINT</div>
+            <h2 id="result-title"></h2>
+            <p class="result-description" id="result-description"></p>
+
+            <div class="recommendation">
+              <span class="recommendation-label">A useful first step</span>
+              <strong id="recommendation-title"></strong>
+              <p id="recommendation-description"></p>
+            </div>
+
+            <div class="impact-card">
+              <div>
+                <span class="impact-label">POTENTIAL TIME BACK</span>
+                <p class="impact-value"><strong id="hours-result"></strong><span>hours / week</span></p>
+              </div>
+              <span class="impact-spark" aria-hidden="true">✳</span>
+            </div>
+            <p class="estimate-disclaimer">
+              An illustrative estimate only: assumes 60% of the selected workflow time could be improved.
+              Actual outcomes depend on discovery and implementation.
+            </p>
+
+            <div class="card-actions result-actions">
+              <button class="button button-back" id="restart-button" type="button">Start over</button>
+              <div class="result-button-group">
+                <button class="button button-copy" id="copy-button" type="button">Copy my brief</button>
+                <a class="button button-primary" href="https://www.cynbit.in/contact" target="_blank" rel="noreferrer">
+                  Talk to Cynbit <span aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Project-fit planner <span class="footer-divider">/</span> Cynbit Technologies</span>
+      <a href="https://www.cynbit.in/">cynbit.in <span aria-hidden="true">&nearr;</span></a>
+    </footer>
+  </body>
+</html>
